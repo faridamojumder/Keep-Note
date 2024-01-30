@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <button onclick="deleteLocalStorageData('notes')">Delete All Notes</button>
+    <div class="keep-note-form">
+    <main>
+        <div class="new-note">
+          <input type="hidden" id="uid">
+          <input type="text" name="title" id="title" placeholder="Title">
+          <textarea name="content" id="content" placeholder="Start writing"></textarea>
+          <div id="form-error"></div>
+        </div>
+        <div class="button-container">
+          <button class="add-btn" id="updated" onclick="addNote()">Add note</button>
+          <button class="add-btn" id="cancel" onclick="cancel()">Cancel</button>
+
+        </div>
+        <div id="notes-wrapper"></div>
+      </main>
+    </div>
+    <script src="./lib/index.js"></script>
+</body>
+</html>
